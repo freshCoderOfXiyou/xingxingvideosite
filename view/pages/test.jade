@@ -1,0 +1,26 @@
+doctype
+html
+	head
+		title #{title}
+		meta(charset='utf-8')
+		meta(name='viewport' content='width=device-width')
+		link(href="./style/test.css" rel="stylesheet" type="text/css")
+	body
+		h1 hello , this is my video
+		div.video-outer
+			video(src='./videos/MVI_2389.MOV' controls="controls" autoplay="autoplay" loop="loop")
+			canvas
+			div.caption-input
+				span.colorItemsTitle select color
+				ul.colorItems
+					li.selectedColor#colorItemFrist
+					li#colorItemSecond
+					li#colorItemThrid
+					li#colorItemFourth
+					li#colorItemFifth
+					li#colorItemSixth
+				span.ismoveTitle ismove
+				input.caption-input-ismove(type="checkbox" name="" checked="checked")
+				input.caption-input-text(type="text" name="")
+				span.caption-sendButton send
+	script(src='./script/test.js')
