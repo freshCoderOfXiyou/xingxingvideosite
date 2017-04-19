@@ -1,4 +1,4 @@
-
+ 
 (function () {
 	window.onload=function () {
 		var video = document.getElementsByTagName("video")[0]
@@ -19,6 +19,21 @@
 		var selectedColorIndex = 0
 		var prevPlayTime = 0
 		var testArrayCopy = []
+		var capobjId = 0
+		var topObjs = [{blank:true , value : 20 ,index:0},
+						{blank:true , value : 50 ,index:1},
+						{blank:true , value : 80 ,index:2},
+						{blank:true , value : 110 ,index:3},
+						{blank:true , value : 140 ,index:4},
+						{blank:true , value : 170 ,index:5},
+						{blank:true , value : 200 ,index:6},
+						{blank:true , value : 230 ,index:7},
+						{blank:true , value : 260 ,index:8},
+						{blank:true , value : 290 ,index:9},
+						{blank:true , value : 320 ,index:10},
+						{blank:true , value : 350 ,index:11},
+						{blank:true , value : 380 ,index:12},
+						{blank:true , value : 410 ,index:13}]
 //test data
 var testArray = [{content:"ABCDEFGHIJKLMNOPQRSTUVWXYZ",time:"1",ismove:false,colorIndex:0},
 {content:"233333333333333",time:"2",ismove:true,colorIndex:0},
@@ -72,51 +87,71 @@ var testArray = [{content:"ABCDEFGHIJKLMNOPQRSTUVWXYZ",time:"1",ismove:false,col
 {content:"马上就下课了，瓦罗蓝大陆走起了～～～",time:"35",ismove:true,colorIndex:5},
 {content:"马上就下课了，瓦罗蓝大陆走起了～～～",time:"36",ismove:true,colorIndex:2},
 {content:"马上就下课了，瓦罗蓝大陆走起了～～～",time:"37",ismove:true,colorIndex:2}]
-		// var testArray = [{content:"233333333333333",time:"1"},
-		// 				{content:"老师说的非常好，我要好好学习了》》》》",time:"12"},
-		// 				{content:"老铁们，小礼物走一波了，小汽车小火箭刷起来吧=========",time:"23"}]
-		// console.log(testArray)
-		// setInterval(function () {
-		// 	console.log(video.currentTime)
-		// },500)
-		// testArrayCopy = testArray
+
 		copyArray(testArray , testArrayCopy)
-		function Caption( x , y , ismove , spe , col , text ) {
-			this.top = y || 20
-			this.left = x || cavWidth
+		function Caption( ismove , spe , col , text ) {
 			this.isMove = ismove
 			this.speed = spe
 			this.color = col || "#ff0"
 			this.content = text
 			this.latestTime = 0 
+			this.width = text.length * 20 
+			this.id = 0
+			this.topIndex = 0
+			this.occupyPos = true 
+			this.top = 300
+			this.left = 0
+			this.setLeftValue()
+			this.setTopValue()
 		}
-		Caption.prototype.init = function () {
-			
+		Caption.prototype.setTopValue = function  () {
+			for(var i = 0 ,len = topObjs.length ; i < len ; i++){
+				if (topObjs[i].blank) {
+					this.top = topObjs[i].value
+					this.topIndex = i
+					topObjs[i].blank = false 
+					break
+				}
+			}
+		}
+		Caption.prototype.setLeftValue = function  () {
+			if (this.isMove) {
+				this.left = cavWidth
+			}
+			else {
+				var contentLength = this.content.length
+				var nowItemLeft = 420 - contentLength * 9
+				this.left = nowItemLeft
+			}
 		}
 		Caption.prototype.moving = function () {
 			if (this.isMove) {
 				this.left-=this.speed
+				if ( this.left + this.width < cavWidth && this.occupyPos) {
+					this.occupyPos = false 
+					topObjs[this.topIndex].blank = true 
+				}
 			} 
 			else{
 				this.latestTime += 1
+				if (this.latestTime > 450) {
+					topObjs[this.topIndex].blank = true 
+				}
 			}
 		}
-		Caption.prototype.dispose = function () {
-			
+		Caption.prototype.setId = function  () {
+			this.id = capobjId
+			capobjId++
 		}
-		// Caption.prototype.getLeftValue = function(){
-			
-		// };
 
-		var cap1 = new Caption( 0 , 400 , true , 1 , 0 , "小礼物走一波，双击6666。。。。")
+		var cap1 = new Caption(  false , 1 , 0 , "小礼物走一波，双击6666。。。。")
 		capObjs.push(cap1)
-		// console.log(cap1)
+		cap1.setId()
 
 		function drawAllText () {
 			ctx.clearRect( 0 , 0 , cavWidth , cavHeight)
 			ctx.beginPath()
 			for(var i=0 , len = capObjs . length ; i < len ; i++ ){
-				// console.log(capObjs[i])+
 				ctx.fillStyle = capObjs[i].color
 				ctx.font = "bold 20px Courier New"
 				ctx.fillText( capObjs[i].content , capObjs[i].left , capObjs[i].top )
@@ -127,7 +162,6 @@ var testArray = [{content:"ABCDEFGHIJKLMNOPQRSTUVWXYZ",time:"1",ismove:false,col
 					// if excute this statement , will has fault because some item in array is null
 					// solution is : write a new function to refresh the array   
 				// }
-				// console.log(capObjs)
 			}
 		}
 
@@ -145,21 +179,18 @@ var testArray = [{content:"ABCDEFGHIJKLMNOPQRSTUVWXYZ",time:"1",ismove:false,col
 			for (var i = testArray.length - 1; i >= 0; i--) {
 				var nowItemTime = parseInt(testArray[i].time) 
 				if ( nowItemTime == now ) {
-					var nowItemLeft = getLeftValue(testArray[i])
-					
-					var diffTime = Math.abs(nowItemTime - lastItemTime)
-					if (diffTime < 6) { 
-						capHeight += 30
-						capHeight = capHeight > 400 ? 20 : capHeight
-					}	
+					// var nowItemLeft = getLeftValue(testArray[i])
+					// var diffTime = Math.abs(nowItemTime - lastItemTime)
+					// if (diffTime < 6) { 
+					// 	capHeight += 30
+					// 	capHeight = capHeight > 400 ? 20 : capHeight
+					// }	
 					var temcolor = colors[testArray[i].colorIndex]
-					var temcap = new Caption ( nowItemLeft , capHeight , testArray[i].ismove , 1 , temcolor , testArray[i].content  )
-					// console.log(temcolor)
+					var temcap = new Caption (  testArray[i].ismove , 1 , temcolor , testArray[i].content  )
 					capObjs.push(temcap)
+					capObjs[capObjs.length - 1].setId()
 					temcap = null
-					lastItemTime = parseInt(testArray[i].time)
 					testArray.splice(i,1)
-					console.log(testArray.length +">" +testArrayCopy.length)
 				}
 			}
 		}
@@ -169,22 +200,20 @@ var testArray = [{content:"ABCDEFGHIJKLMNOPQRSTUVWXYZ",time:"1",ismove:false,col
 			var now = parseInt( video.currentTime )
 			var inputIsmoveValue = ismoveInputEle.checked
 			var temObj = {content:inputEleTxt,time:now,ismove:inputIsmoveValue,colorIndex:selectedColorIndex}
-			// testArray.push(temObj)
-			// var temcap = new Caption ( 0 , capHeight , inputIsmoveValue , 1 , colors[selectedColorIndex] , inputEleTxt)
-
 			testArray.push(temObj)
 			inputEle.value = ""
 		}
-		function getLeftValue (obj) {
-			if (obj.ismove) {
-				return 0
-			}
-			else {
-				var contentLength = obj.content.length
-				var nowItemLeft = 420 - contentLength * 9
-				return nowItemLeft
-			}
-		}
+
+		// function getLeftValue (obj) {
+		// 	if (obj.ismove) {
+		// 		return 0
+		// 	}
+		// 	else {
+		// 		var contentLength = obj.content.length
+		// 		var nowItemLeft = 420 - contentLength * 9
+		// 		return nowItemLeft
+		// 	}
+		// }
 
 		function reinitCav (argument) {
 			// testArray = testArrayCopy
@@ -192,22 +221,21 @@ var testArray = [{content:"ABCDEFGHIJKLMNOPQRSTUVWXYZ",time:"1",ismove:false,col
 			capObjs = []
 			capHeight = 0
 			clearInterval(canvasTimer)
+			canvasTimer = null
 			initCanvas()
-		}
-		function getTopValue (argument) {
-			
 		}
 
 		var canvasTimer = null 
 
  		function initCanvas () {
+ 			if (canvasTimer == null ) {
 				canvasTimer = setInterval(function (argument) {
 					drawAllText()
 					updateArray()
 					refreshObjs(capObjs)
-					// console.log(capObjs)
-					// console.log(video.currentTime)
-			},10)
+				},10)
+ 			}
+			
 		}//end function initCanvas
 
 		function copyArray (arr1 , arr2) {
@@ -233,7 +261,7 @@ var testArray = [{content:"ABCDEFGHIJKLMNOPQRSTUVWXYZ",time:"1",ismove:false,col
 					prevSelectItemId = "colorItemFourth"
 					break;
 				case 4:
-					prevSelectItemId = "colorItemFifth"
+					prevSelectItemId = "colorItemFifth" 
 					break;
 				case 5:
 					prevSelectItemId = "colorItemSixth"
@@ -271,23 +299,27 @@ var testArray = [{content:"ABCDEFGHIJKLMNOPQRSTUVWXYZ",time:"1",ismove:false,col
 					break;
 			}
 		}, false)
+
 		video.addEventListener("playing" , function () {
 			initCanvas()
 		})
+
 		video.addEventListener("timeupdate", function  () {
-			// reinitCav()
 			var nowPlayTime = video.currentTime
 			var diffTime = Math.abs(nowPlayTime - prevPlayTime)
 			prevPlayTime = nowPlayTime
 			if (diffTime > 1) {
-				console.log(diffTime)
 				reinitCav()
 			}
 		}, false)
+
 		video.addEventListener("pause" , function () {
 			clearInterval(canvasTimer)
+			canvasTimer = null 
 		})
+
 		sendEle.addEventListener("click" , sendCaption)
+
 		inputEle.addEventListener("keydown", function(e) {
 			var keynum = 0
 			keynum = window.event ? e.keyCode : e.which
