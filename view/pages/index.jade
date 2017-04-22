@@ -1,1 +1,269 @@
-index.jade
+doctype
+html
+	head
+		title #{title}
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width")
+		link(href="./style/public.css" rel="stylesheet" type="text/css")
+		link(href="./style/index.css" rel="stylesheet" type="text/css")
+		link(href="./bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css")
+	body(style="background:#F3F5F7;")
+		include ../includes/header.jade
+		div.content-outer
+			div.content
+				div.banner
+					//- img.banner-imgs-bk(src="./images/pc/index/bk.jpg")
+					ul.banner-menu
+						li 前端开发
+						li 后端开发
+						li 移动开发
+						li 数据库
+						li 云计算&大数据
+						li 运维&测试
+						li UI设计
+					div.banner-imgs-outer
+						div.banner-imgs-img
+							a(href="javascript:void(0);")
+								img(src="./images/pc/index/banner5.jpg" alt="")
+							a(href="javascript:void(0);")
+								img(src="./images/pc/index/banner1.jpg" alt="")
+							a(href="javascript:void(0);")
+								img(src="./images/pc/index/banner2.jpg" alt="")
+							a(href="javascript:void(0);")
+								img(src="./images/pc/index/banner3.jpg" alt="")
+							a(href="javascript:void(0);")
+								img(src="./images/pc/index/banner4.jpg" alt="")
+							a(href="javascript:void(0);")
+								img(src="./images/pc/index/banner5.jpg" alt="")
+							a(href="javascript:void(0);")
+								img(src="./images/pc/index/banner1.jpg" alt="")
+					ul.banner-btns
+						li#bt1
+						li#bt2
+						li#bt3
+						li#bt4
+						li#bt5
+					span.banner-toleft
+					span.banner-toright
+					div.banner-learnPath
+						ul.banner-learnPath-li
+							li
+								a(href="javascript:void(0);")
+									img(src="./images/pc/index/path_1.png")
+							li
+								a(href="javascript:void(0);")
+									img(src="./images/pc/index/path_2.png")
+							li
+								a(href="javascript:void(0);")
+									img(src="./images/pc/index/path_3.png")
+							li
+								a(href="javascript:void(0);")
+									img(src="./images/pc/index/path_4.png")
+							li
+								a(href="javascript:void(0);")
+									img(src="./images/pc/index/path_5.png")
+				div.floor#firstFloor
+					div.foolTitle
+						h3 免费好课
+						span.more 更多
+					div.floor-classList
+						div.floor-classSin 
+							a.floor-content
+								h4.floor-classSin-title.floor-classSin-title-bgcol1 Node.js
+								div.floor-classSin-main
+									h4.floor-classSin-subTitle 去哪儿前端沙龙分享第三期
+									p.floor-classSin-content 程为去哪儿网前端交互沙龙第三期，精彩分享不容错过噢
+									div.floor-classSin-detail 高级· 22749人在学
+							div.floor-bkimg
+								img(src="./images/pc/index/cover002_s.jpg")
+						div.floor-classSin 
+							a.floor-content
+								h4.floor-classSin-title.floor-classSin-title-bgcol1 MongoDB
+								div.floor-classSin-main
+									h4.floor-classSin-subTitle MongoDB复制集—复制集安全
+									p.floor-classSin-content 数据库安全是重中之重，认真对待才能守住数据库的大门
+									div.floor-classSin-detail 高级· 1701人在学
+							div.floor-bkimg
+								img(src="./images/pc/index/cover008_s.jpg")
+						div.floor-classSin 
+							a.floor-content
+								h4.floor-classSin-title.floor-classSin-title-bgcol1 MongoDB
+								div.floor-classSin-main
+									h4.floor-classSin-subTitle MongoDB复制集—复制集监控
+									p.floor-classSin-content 关于数据库监控，自有人代劳，做到心中有数，处乱不惊
+									div.floor-classSin-detail 高级· 4135人在学 
+							div.floor-bkimg
+								img(src="./images/pc/index/cover012_s.jpg")
+						div.floor-classSin 
+							a.floor-content
+								h4.floor-classSin-title.floor-classSin-title-bgcol1 测试
+								div.floor-classSin-main
+									h4.floor-classSin-subTitle WeTest移动测试系列沙龙-手游安全测试
+									p.floor-classSin-content 游戏安全测试知识干货。
+									div.floor-classSin-detail 中级· 364人在学
+							div.floor-bkimg
+								img(src="./images/pc/index/cover016_s.jpg")
+						div.floor-classSin 
+							a.floor-content
+								h4.floor-classSin-title.floor-classSin-title-bgcol1 MySQLOracle
+								div.floor-classSin-main
+									h4.floor-classSin-subTitle 2015 Oracle技术嘉年华
+									p.floor-classSin-content 2015 Oracle技术嘉年华尽在慕课网，让大家尽情享用技术盛宴
+									div.floor-classSin-detail 高级· 22749人在学
+							div.floor-bkimg
+								img(src="./images/pc/index/cover017_s.jpg")
+				div.floor#secondFloor
+					div.foolTitle
+						h3 免费好课
+						span.more 更多
+					div.floor-classList
+						div.floor-classSin 
+							a.floor-content
+								h4.floor-classSin-title.floor-classSin-title-bgcol1 Node.js
+								div.floor-classSin-main
+									h4.floor-classSin-subTitle 去哪儿前端沙龙分享第三期
+									p.floor-classSin-content 程为去哪儿网前端交互沙龙第三期，精彩分享不容错过噢
+									div.floor-classSin-detail 高级· 22749人在学
+							div.floor-bkimg
+								img(src="./images/pc/index/cover019_s.jpg")
+						div.floor-classSin 
+							a.floor-content
+								h4.floor-classSin-title.floor-classSin-title-bgcol1 MongoDB
+								div.floor-classSin-main
+									h4.floor-classSin-subTitle MongoDB复制集—复制集安全
+									p.floor-classSin-content 数据库安全是重中之重，认真对待才能守住数据库的大门
+									div.floor-classSin-detail 高级· 1701人在学
+							div.floor-bkimg
+								img(src="./images/pc/index/cover020_s.jpg")
+						div.floor-classSin 
+							a.floor-content
+								h4.floor-classSin-title.floor-classSin-title-bgcol1 MongoDB
+								div.floor-classSin-main
+									h4.floor-classSin-subTitle MongoDB复制集—复制集监控
+									p.floor-classSin-content 关于数据库监控，自有人代劳，做到心中有数，处乱不惊
+									div.floor-classSin-detail 高级· 4135人在学 
+							div.floor-bkimg
+								img(src="./images/pc/index/cover021_s.jpg")
+						div.floor-classSin 
+							a.floor-content
+								h4.floor-classSin-title.floor-classSin-title-bgcol1 测试
+								div.floor-classSin-main
+									h4.floor-classSin-subTitle WeTest移动测试系列沙龙-手游安全测试
+									p.floor-classSin-content 游戏安全测试知识干货。
+									div.floor-classSin-detail 中级· 364人在学
+							div.floor-bkimg
+								img(src="./images/pc/index/cover025_s.jpg")
+						div.floor-classSin 
+							a.floor-content
+								h4.floor-classSin-title.floor-classSin-title-bgcol1 MySQLOracle
+								div.floor-classSin-main
+									h4.floor-classSin-subTitle 2015 Oracle技术嘉年华
+									p.floor-classSin-content 2015 Oracle技术嘉年华尽在慕课网，让大家尽情享用技术盛宴
+									div.floor-classSin-detail 高级· 22749人在学
+							div.floor-bkimg
+								img(src="./images/pc/index/cover026_s.jpg")
+				div.floor#thridFloor
+					div.foolTitle
+						h3 免费好课
+						span.more 更多
+					div.floor-classList
+						div.floor-classSin 
+							a.floor-content
+								h4.floor-classSin-title.floor-classSin-title-bgcol1 Node.js
+								div.floor-classSin-main
+									h4.floor-classSin-subTitle 去哪儿前端沙龙分享第三期
+									p.floor-classSin-content 程为去哪儿网前端交互沙龙第三期，精彩分享不容错过噢
+									div.floor-classSin-detail 高级· 22749人在学
+							div.floor-bkimg
+								img(src="./images/pc/index/cover034_s.jpg")
+						div.floor-classSin 
+							a.floor-content
+								h4.floor-classSin-title.floor-classSin-title-bgcol1 MongoDB
+								div.floor-classSin-main
+									h4.floor-classSin-subTitle MongoDB复制集—复制集安全
+									p.floor-classSin-content 数据库安全是重中之重，认真对待才能守住数据库的大门
+									div.floor-classSin-detail 高级· 1701人在学
+							div.floor-bkimg
+								img(src="./images/pc/index/cover037_s.jpg")
+						div.floor-classSin 
+							a.floor-content
+								h4.floor-classSin-title.floor-classSin-title-bgcol1 MongoDB
+								div.floor-classSin-main
+									h4.floor-classSin-subTitle MongoDB复制集—复制集监控
+									p.floor-classSin-content 关于数据库监控，自有人代劳，做到心中有数，处乱不惊
+									div.floor-classSin-detail 高级· 4135人在学 
+							div.floor-bkimg
+								img(src="./images/pc/index/cover039_s.jpg")
+						div.floor-classSin 
+							a.floor-content
+								h4.floor-classSin-title.floor-classSin-title-bgcol1 测试
+								div.floor-classSin-main
+									h4.floor-classSin-subTitle WeTest移动测试系列沙龙-手游安全测试
+									p.floor-classSin-content 游戏安全测试知识干货。
+									div.floor-classSin-detail 中级· 364人在学
+							div.floor-bkimg
+								img(src="./images/pc/index/cover041_s.jpg")
+						div.floor-classSin 
+							a.floor-content
+								h4.floor-classSin-title.floor-classSin-title-bgcol1 MySQLOracle
+								div.floor-classSin-main
+									h4.floor-classSin-subTitle 2015 Oracle技术嘉年华
+									p.floor-classSin-content 2015 Oracle技术嘉年华尽在慕课网，让大家尽情享用技术盛宴
+									div.floor-classSin-detail 高级· 22749人在学
+							div.floor-bkimg
+								img(src="./images/pc/index/cover043_s.jpg")
+				div.floor#fourthFloor
+					div.foolTitle
+						h3 免费好课
+						span.more 更多
+					div.floor-classList
+						div.floor-classSin 
+							a.floor-content
+								h4.floor-classSin-title.floor-classSin-title-bgcol1 Node.js
+								div.floor-classSin-main
+									h4.floor-classSin-subTitle 去哪儿前端沙龙分享第三期
+									p.floor-classSin-content 程为去哪儿网前端交互沙龙第三期，精彩分享不容错过噢
+									div.floor-classSin-detail 高级· 22749人在学
+							div.floor-bkimg
+								img(src="./images/pc/index/cover046_s.jpg")
+						div.floor-classSin 
+							a.floor-content
+								h4.floor-classSin-title.floor-classSin-title-bgcol1 MongoDB
+								div.floor-classSin-main
+									h4.floor-classSin-subTitle MongoDB复制集—复制集安全
+									p.floor-classSin-content 数据库安全是重中之重，认真对待才能守住数据库的大门
+									div.floor-classSin-detail 高级· 1701人在学
+							div.floor-bkimg
+								img(src="./images/pc/index/cover047_s.jpg")
+						div.floor-classSin 
+							a.floor-content
+								h4.floor-classSin-title.floor-classSin-title-bgcol1 MongoDB
+								div.floor-classSin-main
+									h4.floor-classSin-subTitle MongoDB复制集—复制集监控
+									p.floor-classSin-content 关于数据库监控，自有人代劳，做到心中有数，处乱不惊
+									div.floor-classSin-detail 高级· 4135人在学 
+							div.floor-bkimg
+								img(src="./images/pc/index/cover049_s.jpg")
+						div.floor-classSin 
+							a.floor-content
+								h4.floor-classSin-title.floor-classSin-title-bgcol1 测试
+								div.floor-classSin-main
+									h4.floor-classSin-subTitle WeTest移动测试系列沙龙-手游安全测试
+									p.floor-classSin-content 游戏安全测试知识干货。
+									div.floor-classSin-detail 中级· 364人在学
+							div.floor-bkimg
+								img(src="./images/pc/index/cover016_s.jpg")
+						div.floor-classSin 
+							a.floor-content
+								h4.floor-classSin-title.floor-classSin-title-bgcol1 MySQLOracle
+								div.floor-classSin-main
+									h4.floor-classSin-subTitle 2015 Oracle技术嘉年华
+									p.floor-classSin-content 2015 Oracle技术嘉年华尽在慕课网，让大家尽情享用技术盛宴
+									div.floor-classSin-detail 高级· 22749人在学
+							div.floor-bkimg
+								img(src="./images/pc/index/cover020_s.jpg")
+		include ../includes/footer.jade
+		script(src='./bower_components/jquery/dist/jquery.min.js')
+		script(src='./bower_components/bootstrap/dist/js/bootstrap.min.js')
+		script(src="./script/index.js")
+
