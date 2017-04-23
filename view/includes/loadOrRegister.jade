@@ -1,0 +1,46 @@
+div.load-cover
+	div.load-form
+		div.load-close
+			span.load-close-btn.glyphicon.glyphicon-remove
+		div.load-choose
+			span.load-choose-form.load-choose-select#load-choose-load 账户登录
+			span.load-choose-scan 立即注册
+		div.load-wrap
+			div.load-wrap-inner
+				div.load-wrap-form
+					span.load-form-alert 公共场所不建议自动登录，以防账号丢失
+						span.glyphicon.glyphicon-exclamation-sign
+					form(method='post').load-form-content
+						div.load-formCon-line
+							span.glyphicon.glyphicon-user.load-formCon-icon
+							input(type='text' placeholder='邮箱/用户名/手机').load-formCon-input
+						div.load-formCon-line
+							span.glyphicon.glyphicon-lock.load-formCon-icon
+							input(type='password' placeholder='密码').load-formCon-input
+						div.load-form-forget
+							input(type='checkbox')
+							span 自动登录
+							a(href='javascript:;') 忘记密码
+						input(type='submit' value='登 录').load-formCon-submit
+				div.load-register
+					form(method='post').load-form-content
+						div.load-formCon-line
+							span.glyphicon.glyphicon-user.load-formCon-icon
+							input(type='text' placeholder='请输入注册邮箱/手机号').load-formCon-input
+						div.load-formCon-line
+							span.glyphicon.glyphicon-lock.load-formCon-icon
+							input(type='password' placeholder='请输入密码').load-formCon-input
+						div.load-formCon-line
+							span.glyphicon.glyphicon-lock.load-formCon-icon
+							input(type='password' placeholder='请再次输入密码以确认').load-formCon-input
+						input(type='submit' value='注 册').load-formCon-submit
+		ul.load-other
+			li
+				span.load-other-qq
+				a(href='javascript:;') QQ
+			li
+				span.load-other-weixin
+				a(href='javascript:;') 微信
+			li
+				span.load-other-zhi
+				a(href='javascript:;') 支付宝

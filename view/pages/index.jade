@@ -7,6 +7,7 @@ html
 		link(href="./style/public.css" rel="stylesheet" type="text/css")
 		link(href="./style/index.css" rel="stylesheet" type="text/css")
 		link(href="./bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css")
+		link(href="./style/loadOrRegister.css" rel="stylesheet" type="text/css")
 	body(style="background:#F3F5F7;")
 		include ../includes/header.jade
 		div.content-outer
@@ -262,8 +263,10 @@ html
 									div.floor-classSin-detail 高级· 22749人在学
 							div.floor-bkimg
 								img(src="./images/pc/index/cover020_s.jpg")
+		include ../includes/loadOrRegister.jade
 		include ../includes/footer.jade
 		script(src='./bower_components/jquery/dist/jquery.min.js')
 		script(src='./bower_components/bootstrap/dist/js/bootstrap.min.js')
 		script(src="./script/index.js")
+		script(src="./script/load.js")
 

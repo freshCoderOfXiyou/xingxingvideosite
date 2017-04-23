@@ -348,13 +348,6 @@ var testArray = [{content:"ABCDEFGHIJKLMNOPQRSTUVWXYZ",time:"1",ismove:false,col
 		})
 
 
-		var aaaa = function() {
-			alert(1)
-		}
-		aaaa()
-		// function b(aaaa){
-		// 	return aaaa()
-		// }
-		// b()	
+		
 	}//end
 })()

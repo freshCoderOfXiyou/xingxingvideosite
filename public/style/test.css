@@ -1,9 +1,14 @@
-
+.content{
+	width: 1200px;
+	margin: 0 auto;
+	background: lightpink;
+}
 .video-outer{
-	width: 800px;
-	height: 450px;
+	width: 500px;
+	height: 550px;
 	border: 1px solid #000;
 	position: relative;
+	background: lightblue;
 }
 	.video-outer video , .video-outer canvas{
 		width: 100%;

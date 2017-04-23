@@ -5,22 +5,57 @@ html
 		meta(charset='utf-8')
 		meta(name='viewport' content='width=device-width')
 		link(href="./style/test.css" rel="stylesheet" type="text/css")
+		link(href="./style/public.css" rel="stylesheet" type="text/css")
 	body
-		h1 hello , this is my video
-		div.video-outer
-			video(src='./videos/MVI_2389.MOV' controls="controls" autoplay="autoplay" )
-			canvas
-			div.caption-input
-				span.colorItemsTitle select color
-				ul.colorItems
-					li.selectedColor#colorItemFrist
-					li#colorItemSecond
-					li#colorItemThrid
-					li#colorItemFourth
-					li#colorItemFifth
-					li#colorItemSixth
-				span.ismoveTitle ismove
-				input.caption-input-ismove(type="checkbox" name="" checked="checked")
-				input.caption-input-text(type="text" name="")
-				span.caption-sendButton send
+		include ../includes/header.jade
+		div.content
+			div.video-info
+				h3.video-info-title 信管2016年开放实验启动课程（开放实验起源及意义介绍）
+				div.video-info-detail
+					span.video-info-detailTitle 分类
+					span.video-info-detailCon 课外拓展>开放实验
+					span.video-info-detailTitle 时间
+					span.video-info-detailCon 2016年1月08日
+				div.video-info-hot
+					span.video-info-hotTitle
+					span.video-info-hotCon
+					span.video-info-hotTitle
+					span.video-info-hotCon
+					span.video-info-hotTitle
+					span.video-info-hotCon
+			div.video-banner
+				a(href="javascript:void(0);")
+					img(src="" alt="")
+				a(href="javascript:void(0);")
+					img(src="" alt="")
+			div.video-main
+				div.video-outer
+					video(src='./videos/MVI_2389.MOV' controls="controls")
+					canvas
+					div.caption-input
+						span.colorItemsTitle select color
+						ul.colorItems
+							li.selectedColor#colorItemFrist
+							li#colorItemSecond
+							li#colorItemThrid
+							li#colorItemFourth
+							li#colorItemFifth
+							li#colorItemSixth
+						span.ismoveTitle ismove
+						input.caption-input-ismove(type="checkbox" name="" checked="checked")
+						input.caption-input-text(type="text" name="")
+						span.caption-sendButton send
+				div.video-conversition
+					div.video-conver-title
+					div.video-conver-main
+						div.video-conver-sin
+							div.video-converSin-usrheader
+							div.video-converSin-con
+								span.vieo-converSin-username
+								div.video-converSin-text
+					div.video-conver-send
+						input(type="text" name="")
+						span send
+			div.video-recommand
+		include ../includes/footer.jade
 	script(src='./script/test.js')
