@@ -4,7 +4,7 @@
 		var video = document.getElementsByTagName("video")[0]
 		var cav = document.getElementsByTagName("canvas")[0]
 		//设置常量canvas的高度以及宽度
-		var cavWidth = 800 
+		var cavWidth = 845 
 		var cavHeight = 420
 		cav.width=cavWidth
 		cav.height=cavHeight 
@@ -18,7 +18,7 @@
 		var colorUl = document.getElementsByClassName("colorItems")[0]
 		var ismoveInputEle = document.getElementsByClassName("caption-input-ismove")[0]
 		//弹幕颜色
-		var colors=["#fff","#FFCCCC","#CCFFCC","#CCCCFF","#FFFFCC","#CCFFFF"]
+		var colors=["#fff","#000","#00F","#FF0","#0FF","#F0F"]
 		var selectedColorIndex = 0
 		var prevPlayTime = 0
 		//测试数据的数组
