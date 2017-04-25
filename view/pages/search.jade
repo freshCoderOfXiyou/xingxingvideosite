@@ -1,0 +1,19 @@
+doctype
+html
+	head
+		title #{title}
+		meta(charset='utf-8')
+		meta(name='viewport' content='width=device-width')
+		link(href="./style/search.css" rel="stylesheet" type="text/css")
+		link(href="./style/public.css" rel="stylesheet" type="text/css")
+		link(href="./bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css")
+		link(href="./style/loadOrRegister.css" rel="stylesheet" type="text/css")
+	body(style="background:#F3F5F7;")
+		include ../includes/header.jade
+		div
+		include ../includes/loadOrRegister.jade
+		include ../includes/footer.jade
+	script(src='./bower_components/jquery/dist/jquery.min.js')
+	script(src='./script/search.js')
+	script(src="./script/load.js")
+	

@@ -1,5 +1,5 @@
 (function () {
-	$().ready(function  () {
+	
 		var choose=false
 		$('.load-choose-form').click(function  (e) {
 			if (choose) {
@@ -36,5 +36,5 @@
 			}
 						
 		})
-	})//end ready
+		//end ready
 })()

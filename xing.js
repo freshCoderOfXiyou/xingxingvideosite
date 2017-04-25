@@ -15,6 +15,19 @@ app.get('/' , function(req,res){
 		title:"video test"
 	})
 })
+app.get("/index" , function (req , res) {
+	// body...
+	res.render("index",{
+		title:"welcome to xing educate site"  
+	})
+})
+app.get("/search" , function (req , res) {
+	// body...
+	res.render("search",{
+		title:"searching"
+	})
+})
+
 app.listen(app.get('port'),function(){
 	console.log("Express started on http://localhost:"+app.get('port')+";press Ctrl-c to continue")
 })

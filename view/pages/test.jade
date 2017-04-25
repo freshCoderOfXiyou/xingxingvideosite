@@ -6,56 +6,181 @@ html
 		meta(name='viewport' content='width=device-width')
 		link(href="./style/test.css" rel="stylesheet" type="text/css")
 		link(href="./style/public.css" rel="stylesheet" type="text/css")
-	body
+		link(href="./bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css")
+		link(href="./style/loadOrRegister.css" rel="stylesheet" type="text/css")
+	body(style="background:#F3F5F7;")
 		include ../includes/header.jade
 		div.content
 			div.video-info
 				h3.video-info-title 信管2016年开放实验启动课程（开放实验起源及意义介绍）
 				div.video-info-detail
-					span.video-info-detailTitle 分类
+					span.video-info-detailTitle 分类:
 					span.video-info-detailCon 课外拓展>开放实验
-					span.video-info-detailTitle 时间
+					span.video-info-detailTitle 时间:
 					span.video-info-detailCon 2016年1月08日
 				div.video-info-hot
-					span.video-info-hotTitle
-					span.video-info-hotCon
-					span.video-info-hotTitle
-					span.video-info-hotCon
-					span.video-info-hotTitle
-					span.video-info-hotCon
+					span.video-info-hotTitle.glyphicon.glyphicon-play-circle(alt="play number")
+					span.video-info-hotCon 12,236
+					span.video-info-hotTitle.glyphicon.glyphicon-heart
+					span.video-info-hotCon 536
+					span.video-info-hotTitle.glyphicon.glyphicon-list-alt
+					span.video-info-hotCon 52
 			div.video-banner
 				a(href="javascript:void(0);")
-					img(src="" alt="")
+					img(src="./images/pc/index/detailBanner4.jpg" alt="")
 				a(href="javascript:void(0);")
-					img(src="" alt="")
+					img(src="./images/pc/index/detailBanner5.jpg" alt="")
+		div.video-wrap
 			div.video-main
+				span.video-directory-title
+					span.video-directory-titleName 目录：
+					span.glyphicon.glyphicon-eye-close.video-directory-btn
+				ul.video-directory
+					li
+						a(href="javascript:void(0);") 1.信管2016年开放实验启动课程
+					li
+						a(href="javascript:void(0);") 2.开放实验第二课
+					li.video-directory-nowItem
+						a(href="javascript:void(0);") 3.开放实验第三课
 				div.video-outer
-					video(src='./videos/MVI_2389.MOV' controls="controls")
+					div.video-advertise
+						div.video-advertise-toLeft
+						div.video-advertise-con
+							span 开放实验上线啦快快学起来，你的同学等你很久了
+							span 安卓课程上线啦快快学起来，你的同学等你很久了
+							span 前端课程上线啦快快学起来，你的同学等你很久了
+							span 开放实验上线啦快快学起来，你的同学等你很久了
+							span 安卓课程上线啦快快学起来，你的同学等你很久了
+						div.video-advertise-toRight
+					video(src='./videos/MVI_2389.MOV' controls="controls" )
 					canvas
 					div.caption-input
-						span.colorItemsTitle select color
-						ul.colorItems
-							li.selectedColor#colorItemFrist
-							li#colorItemSecond
-							li#colorItemThrid
-							li#colorItemFourth
-							li#colorItemFifth
-							li#colorItemSixth
-						span.ismoveTitle ismove
-						input.caption-input-ismove(type="checkbox" name="" checked="checked")
-						input.caption-input-text(type="text" name="")
-						span.caption-sendButton send
-				div.video-conversition
-					div.video-conver-title
-					div.video-conver-main
-						div.video-conver-sin
-							div.video-converSin-usrheader
-							div.video-converSin-con
-								span.vieo-converSin-username
-								div.video-converSin-text
-					div.video-conver-send
-						input(type="text" name="")
-						span send
-			div.video-recommand
+						div.caption-input-opertaionGroup
+							label.colorItemsTitle 弹幕颜色
+							ul.colorItems
+								li.selectedColor#colorItemFrist
+								li#colorItemSecond
+								li#colorItemThrid
+								li#colorItemFourth
+								li#colorItemFifth
+								li#colorItemSixth
+						div.caption-input-opertaionGroup
+							label(for="ismoveCheckbox").ismoveTitle 移动弹幕
+							input.caption-input-ismove(type="checkbox" name="ismoveCheckbox" checked="checked")
+						div.caption-input-opertaionGroup
+							input.caption-input-text(type="text" name="" placeholder="尽情地发表自己的意见")
+							span.caption-sendButton 发送
+					div.video-conversition
+						div.video-conver-title 聊天室
+						div.video-conver-main
+							div.video-conver-sin
+								div.video-converSin-usrheader
+									img(src="./images/pc/index/usr5.jpg")
+								div.video-converSin-con
+									span.vieo-converSin-username 爱哭的毛毛虫
+									div.video-converSin-text 开放实验原来起源于美国啊。
+							div.video-conver-sin
+								div.video-converSin-usrheader
+									img(src="./images/pc/index/usr4.jpg")
+								div.video-converSin-con
+									span.vieo-converSin-username 扫除一切害人虫
+									div.video-converSin-text 开放实验是为了同学们更加自由地去发挥自己能力以及拓展自
+							div.video-conver-sin
+								div.video-converSin-usrheader
+									img(src="./images/pc/index/usr5.jpg")
+								div.video-converSin-con
+									span.vieo-converSin-username 爱哭的毛毛虫
+									div.video-converSin-text 开放实验原来起源于美国啊。
+							div.video-conver-sin
+								div.video-converSin-usrheader
+									img(src="./images/pc/index/usr4.jpg")
+								div.video-converSin-con
+									span.vieo-converSin-username 扫除一切害人虫
+									div.video-converSin-text 开放实验是为了同学们更加自由地去发挥自己能力以及拓展自
+							div.video-conver-sin
+								div.video-converSin-usrheader
+									img(src="./images/pc/index/usr5.jpg")
+								div.video-converSin-con
+									span.vieo-converSin-username 爱哭的毛毛虫
+									div.video-converSin-text 开放实验原来起源于美国啊。
+							div.video-conver-sin.video-conver-mymessage
+								div.video-converSin-usrheader
+									img(src="./images/pc/index/usr3.jpg")
+								div.video-converSin-con
+									span.vieo-converSin-username 汉东网警
+									div.video-converSin-text 你们说的都对
+							div.video-conver-sin
+								div.video-converSin-usrheader
+									img(src="./images/pc/index/usr5.jpg")
+								div.video-converSin-con
+									span.vieo-converSin-username 爱哭的毛毛虫
+									div.video-converSin-text 开放实验原来起源于美国啊。
+							div.video-conver-sin
+								div.video-converSin-usrheader
+									img(src="./images/pc/index/usr4.jpg")
+								div.video-converSin-con
+									span.vieo-converSin-username 扫除一切害人虫
+									div.video-converSin-text 开放实验是为了同学们更加自由地去发挥自己能力以及拓展自
+						div.video-conver-send
+							input.video-conver-sendTxt(type="text" name="" placeholder="发送消息，分享心得，和同学一起思考")
+							span.video-conver-sendBtn 发送
+		div.video-recommand
+			div.video-recommand-banner
+				a(href="javascript:void(0);")
+					img(src="./images/pc/index/detailBannerText2.jpg")
+			div.floor#firstFloor
+				div.foolTitle
+					h3 课程推荐
+					span.more 更多
+				div.floor-classList
+					div.floor-classSin 
+						a.floor-content
+							h4.floor-classSin-title.floor-classSin-title-bgcol1 Node.js
+							div.floor-classSin-main
+								h4.floor-classSin-subTitle 去哪儿前端沙龙分享第三期
+								p.floor-classSin-content 程为去哪儿网前端交互沙龙第三期，精彩分享不容错过噢
+								div.floor-classSin-detail 高级· 22749人在学
+						div.floor-bkimg
+							img(src="./images/pc/index/cover002_s.jpg")
+					div.floor-classSin 
+						a.floor-content
+							h4.floor-classSin-title.floor-classSin-title-bgcol1 MongoDB
+							div.floor-classSin-main
+								h4.floor-classSin-subTitle MongoDB复制集—复制集安全
+								p.floor-classSin-content 数据库安全是重中之重，认真对待才能守住数据库的大门
+								div.floor-classSin-detail 高级· 1701人在学
+						div.floor-bkimg
+							img(src="./images/pc/index/cover008_s.jpg")
+					div.floor-classSin 
+						a.floor-content
+							h4.floor-classSin-title.floor-classSin-title-bgcol1 MongoDB
+							div.floor-classSin-main
+								h4.floor-classSin-subTitle MongoDB复制集—复制集监控
+								p.floor-classSin-content 关于数据库监控，自有人代劳，做到心中有数，处乱不惊
+								div.floor-classSin-detail 高级· 4135人在学 
+						div.floor-bkimg
+							img(src="./images/pc/index/cover012_s.jpg")
+					div.floor-classSin 
+						a.floor-content
+							h4.floor-classSin-title.floor-classSin-title-bgcol1 测试
+							div.floor-classSin-main
+								h4.floor-classSin-subTitle WeTest移动测试系列沙龙-手游安全测试
+								p.floor-classSin-content 游戏安全测试知识干货。
+								div.floor-classSin-detail 中级· 364人在学
+						div.floor-bkimg
+							img(src="./images/pc/index/cover016_s.jpg")
+					div.floor-classSin 
+						a.floor-content
+							h4.floor-classSin-title.floor-classSin-title-bgcol1 MySQLOracle
+							div.floor-classSin-main
+								h4.floor-classSin-subTitle 2015 Oracle技术嘉年华
+								p.floor-classSin-content 2015 Oracle技术嘉年华尽在慕课网，让大家尽情享用技术盛宴
+								div.floor-classSin-detail 高级· 22749人在学
+						div.floor-bkimg
+							img(src="./images/pc/index/cover017_s.jpg")
+		include ../includes/loadOrRegister.jade
 		include ../includes/footer.jade
+	script(src='./bower_components/jquery/dist/jquery.min.js')
 	script(src='./script/test.js')
+	script(src="./script/detailpage.js")
+	script(src="./script/load.js")

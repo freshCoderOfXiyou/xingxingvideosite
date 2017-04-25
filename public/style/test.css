@@ -59,7 +59,9 @@
 		width: 100%;
 		background: white;
 		padding-top: 20px;
-		/* border: 1px solid #909d9a; */
+		padding-bottom: 30px;
+		/* margin-bottom: 20px; */
+		border: 1px solid #909d9a;
 		border-right: none;
 		border-left: none;
 	}
@@ -299,9 +301,10 @@
 						.video-converSin-text{
 							/* background: #07D10B; */
 							background: white;
-							padding: 5px 3px;
+							padding: 5px 5px;
 							border-radius: 4px;
 							border: 1px solid #989898;
+							/* padding: 0 5px; */
 						}
 						.video-conver-mymessage .video-converSin-text{
 							background: #07D10B;
@@ -328,6 +331,128 @@
 							cursor: pointer;
 						}
 		.video-recommand{
-
+			width: 1200px;
+			/* background: lightsalmon; */
+			/* height: 500px; */
+			padding:30px 0;
+			margin: 0 auto;
+		}	
+			.floor{
+		width: 100%;
+		/* background: blue; */
+		margin: 10px 0;
+	}
+	#firstFloor{
+		/* margin-top: 680px; */
+	}
+		.foolTitle{
+			width: 100%;
+			/* background: yellow; */
+			overflow: hidden;
 		}
+			.foolTitle>h3{
+				float: left;
+			}
+			.more{
+				float: right;
+				/* margin: ; */
+				line-height: 56px;
+				margin-right: 30px;
+			}
+		.floor-classList{
+			overflow: hidden;
+			/* padding: 0 10px; */
+			/* background: red; */
+		}
+			.floor-classSin {
+				float: left;
+				width: 224px;
+				height: 228px;
+				margin-right: 19px;
+				margin-bottom: 5px;
+				position: relative;
+				border-radius: 4px;
+				cursor: pointer;
+				overflow: hidden;
+				box-shadow: 0 4px 8px 0 rgba(7,17,27,.1)
+			}
+				.floor-classSin:last-child{
+					margin: 0;
+				}
+				.floor-content{
+					position: relative;
+					z-index: 1;
+					display: block;
+				}
+					.floor-content:hover{
+						text-decoration: none;
+					}
+					.floor-classSin-title{
+						position: relative;
+						z-index: 1;
+						height: 48px;
+						line-height: 48px;
+						padding: 0 15px;
+						font-size: 14px;
+						color: white;
+						font-weight: 600;
+						margin: 0;
+						/* background: rgba(255, 0, 0, 0.5); */
+					}
+					#firstFloor .floor-classSin-title-bgcol1{
+						background: -webkit-linear-gradient(right, rgba(0,185,90,.7), #00b95a);
+						background: -o-linear-gradient(right, rgba(0,185,90,.7), #00b95a);
+						background: linear-gradient(to left, rgba(0,185,90,.7), #00b95a);
+					}
+					#secondFloor .floor-classSin-title-bgcol1{
+						background: -webkit-linear-gradient(right, rgba(210,115,230,.7), #d273e6);
+						background: -o-linear-gradient(right, rgba(210,115,230,.7), #d273e6);
+						background: linear-gradient(to left, rgba(210,115,230,.7), #d273e6);
+					}
+					#thridFloor .floor-classSin-title-bgcol1{
+						background: -webkit-linear-gradient(right, rgba(0,200,200,.7), #00c8c8);
+						background: -o-linear-gradient(right, rgba(0,200,200,.7), #00c8c8);
+						background: linear-gradient(to left, rgba(0,200,200,.7), #00c8c8);
+					}
+					#fourthFloor .floor-classSin-title-bgcol1{
+							background: -webkit-linear-gradient(right, rgba(75,150,220,.7), #4b96dc);
+							background: -o-linear-gradient(right, rgba(75,150,220,.7), #4b96dc);
+							background: linear-gradient(to left, rgba(75,150,220,.7), #4b96dc);
+						}	
+					.floor-classSin-main{
+						position: relative;
+						z-index: 1;
+						background: white;
+						height: 180px;
+						padding: 20px 15px;
+
+					}
+						.floor-classSin-subTitle{
+							margin-bottom: 10px;
+							font-size: 16px;
+							color: #000;
+						}
+						.floor-classSin-content {
+							font-size: 14px;
+							color: #93999f;
+						}
+						.floor-classSin-detail{
+							position: absolute;
+							bottom: 35px;
+							left: 15px;
+							font-size: 12px;
+							color: #93999f;
+						}
+				.floor-bkimg{
+					position: absolute;
+					top: 0;
+					left: 0;
+					z-index: 0;
+					width: 224px;
+					overflow: hidden;
+					width: 224px;
+					height: 228px;
+					background-size: contain;
+					background-repeat: no-repeat;		
+				}
 		
