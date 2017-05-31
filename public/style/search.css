@@ -1,0 +1,105 @@
+.outer{
+	width: 1200px;
+	margin: 0 auto;
+}
+.outermost{
+	width: 100%;
+	background: #d9dde1;
+}
+.outer2{
+	width: 1200px;
+	/*background: red;*/
+	margin: 0 auto;
+
+}
+.search-input{
+	width: 100%;
+	/*background: lightblue;*/
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+	.search-input-form{
+		/*margin-top: 50px;*/
+		width: 640px;
+		margin: 0 auto;
+	}
+		.search-input-form>input[type=text]{
+			width: 550px;
+			height: 48px;
+			text-indent: 10px;
+		}
+		.search-input-form>input[type=submit]{
+			height: 48px;
+			width: 90px;
+			color: white;
+			background: red;
+			border: none;
+			font-size: 18px;
+
+		}
+	.search-input-other {
+		width: 640px;
+		margin: 0 auto;
+		overflow: hidden;
+		margin-top: 20px;
+	}
+		.search-input-other>span{
+			float: left;
+		}
+		.search-input-other>li{
+			float: left;
+			margin-left: 20px;
+			color:#999;
+		}
+.search-list{
+	width: 100%;
+	/*background: yellow;*/
+	margin-top: 15px;
+}
+	.search-sin{
+		width: 800px;
+		border-top: 1px solid #aaa;
+		/*background: pink;*/
+		overflow: hidden;
+		padding: 10px;
+		margin: 0 auto;
+	}
+		.search-img{
+			width: 240px;
+			float: left;
+		}
+			.search-img>img{
+				width: 210px;
+			}
+		.serch-con{
+			width: 520px;
+			height: 120px;
+			float: left;
+			padding:0 10px;
+			position: relative;
+			padding-top: 15px;
+		}
+			.serch-con>span{
+				display: block;
+			}
+			.class-name{
+				width: 100%;
+				font-size: 18px;
+				color:#000;
+				font-weight: 900;
+			}
+			.class-person{
+				width: 100%;
+				font-size: 10px;
+				color:#999;
+				position: absolute;
+				bottom: 50px;
+				/*left: */
+			}
+			.class-subtitle{
+				width: 100%;
+				font-size: 14px;
+				color:#666;
+				position: absolute;
+				bottom: 20px;
+			}

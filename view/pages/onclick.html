@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    <script src="../../public/bower_components/jquery/dist/jquery.min.js"></script>
+         <script>
+             $(document).ready(function(){
+                 $(".title").click(function(){
+                     var id=$(this).data("id");
+                     var name=$(this).data("name");
+                     alert("Id: "+id+" ; Name: "+name);});
+             });
+             
+             function onClick(e){
+                 var id=e.getAttribute("data-id");
+                var name=e.getAttribute("data-name");
+                 alert("Id: "+id+" ; Name: "+name);
+                 console.log(e)
+             }
+         </script>
+    </head>
+    <body>
+        <div class="title" data-id="1" data-name="Microsoft">Click Me</div>
+        <div id="add" data-id="2" data-name="Google" onclick="onClick(this)">Click Me</div>
+    </body>
+</html>

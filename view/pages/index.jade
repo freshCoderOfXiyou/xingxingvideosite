@@ -24,7 +24,7 @@ html
 						li UI设计
 					div.banner-imgs-outer
 						div.banner-imgs-img
-							a(href="javascript:void(0);")
+							a(href="127.0.0.1:3000/online/study?filename=复制")
 								img(src="./images/pc/index/banner5.jpg" alt="")
 							a(href="javascript:void(0);")
 								img(src="./images/pc/index/banner1.jpg" alt="")
@@ -45,11 +45,11 @@ html
 						li#bt4
 						li#bt5
 					span.banner-toleft
-					span.banner-toright
+					span(onclick="tan()").banner-toright
 					div.banner-learnPath
 						ul.banner-learnPath-li
 							li
-								a(href="javascript:void(0);")
+								a(href="127.0.0.1:3000/online/study?filename=复制" onclick="doLinkPost()")
 									img(src="./images/pc/index/path_1.png")
 							li
 								a(href="javascript:void(0);")
@@ -269,4 +269,5 @@ html
 		script(src='./bower_components/bootstrap/dist/js/bootstrap.min.js')
 		script(src="./script/index.js")
 		script(src="./script/load.js")
+		script(src="./script/converToPost.js")
 
